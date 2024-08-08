@@ -10,7 +10,7 @@ A new approach has been in the making, [soldeer.xyz](https://soldeer.xyz), which
 
 #### Add a Dependency Stored in the Central Repository
 
-To add a dependency, you can visit [soldeer.xyz](https://soldeer.xyz) and search for the dependency you want to add (e.g., openzeppelin 0.5.2).
+To add a dependency, you can visit [soldeer.xyz](https://soldeer.xyz) and search for the dependency you want to add (e.g., openzeppelin 5.0.2).
 
 ![image](https://i.postimg.cc/Hm6R8MTs/Unknown-413.png)
 
@@ -87,7 +87,8 @@ For example, having this Foundry config file in a git repository, one can pull t
 auto_detect_solc = false 
 bytecode_hash = "none" 
 fuzz = { runs = 1_000 } 
-gas_reports = ["*"] # <= This is important to be added
+libs = ["dependencies"] # <= This is important to be added
+gas_reports = ["*"]
 
 [dependencies] # <= Dependencies will be added under this config
 "@openzeppelin-contracts" = { version = "5.0.2" }
